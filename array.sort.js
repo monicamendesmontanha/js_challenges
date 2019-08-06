@@ -1,5 +1,6 @@
 // The sort() method sorts the elements of an array in place and returns the sorted array.
 // The default sort order is built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values.
+// E.g: "banana" comes before "cherry". In a numeric sort, 9 comes before 80, but because numbers are converted to strings, "80" comes before "9" in the Unicode order. All undefined elements are sorted to the end of the array.
 // The time and space complexity of the sort cannot be guaranteed as it depends on the implementation.
 
 
