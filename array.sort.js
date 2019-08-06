@@ -4,12 +4,17 @@
 // The time and space complexity of the sort cannot be guaranteed as it depends on the implementation.
 
 
+// To compare numbers instead of strings, the compare function can simply subtract b from a.
+// The following function will sort the array in ascending order (if it doesn't contain Infinity and NaN):
+
 // CLASSIC EXAMPLE:
 let numbers = [4, 2, 5, 1, 3];
 numbers.sort((a, b) => a - b);
 console.log(numbers); // [1, 2, 3, 4, 5]
 console.log("----------------------------")
 
+
+// Practice:
 
 var stringArray = ['Blue', 'Humpback', 'Beluga'];
 var numericStringArray = ['80', '9', '700'];
