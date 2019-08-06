@@ -3,7 +3,7 @@
 // Given an array of integers representing the color of each sock, determine how many pairs of socks with matching colors there are.
 
 // Solution:
-//Sort the array, compare each item side by side to find a pair and total the number of pairs we find.
+// Sort the array, compare each item side by side to find a pair and total the number of pairs we find.
 
 // step 1:
 // create a variable to hold the sorted array and use the built-in sort method the sort method can take a compare function as an argument.
@@ -25,6 +25,7 @@
 
 const sockMerchant = (pileOfSocks) => {
 
+  // To compare numbers instead of strings, the compare function can simply subtract b from a.
   let sortedPileOfSocks = pileOfSocks.sort( (a, b) => a - b )
   // sorted in ascending order: [10, 10, 10, 20, 20, 20, 30, 30, 30]
   let pairs = 0;
