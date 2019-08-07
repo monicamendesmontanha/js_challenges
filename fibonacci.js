@@ -3,24 +3,33 @@
 // After these first two elements, each subsequent element is equal to the sum of the previous two elements.
 // Fibonacci sequence are: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34 ...
 
-const fibonacci = num => {
-  // store the Fibonacci sequence you're going to generate inside an array and
-  // initialize the array with the first two numbers of the sequence
-  const result = [0, 1]
+// PT
+// 1. Criar um array com os 2 primeiros números da sequência;
+// 2. Descobrir o próximo número da sequência (let nextNumber = array[i - 1] + array[1 - 2]);
+// 3. Empurrar o próximo número descoberto para dentro do array de sequências. (array.push(nextNumber))
+// 4. Criar um loop para interagir a partir da segunda posicão do array até a quantidade de vezes solicitada pelo programa;
+// 5. Um vez que saiu do loop, retornar o último número da sequência (array[number]) ou todo o array (array);
 
-  for(let i = 2; i <= num; i++) {
-    // push the sum of the two numbers
-    // preceding the position of i in the result array
-    // at the end of the result array
-    const prevNum1 = result[i - 1]
-    const prevNum2 = result[i - 2]
-    result.push(prevNum1 + prevNum2)
+
+// EN
+// 1. Create an array with the first 2 numbers of the sequence;
+// 2. Find out the next sequence number (let nextNumber = array [i - 1] + array [1 - 2]);
+// 3. Push the next discovered number into the sequence array. (array.push (nextNumber))
+// 4. Create a loop to interact from the second position of the array until the number of times requested by the program;
+// 5. Once out of the loop, return the last sequence number (array [number]) or the entire array (array);
+
+const fibonacci = number => {
+
+  const array = [0, 1]
+
+  for(let i = 2; i <= number; i++) {
+
+    const nextNumber = array[i - 1] + array[i - 2]
+    array.push(nextNumber)
   }
-  // return the last value in the result array
-  return result[num]
-  // OR
-  // return the Fibonacci sequence in result array
-  // return result
+
+  return array[number]
+
 }
 
 console.log(fibonacci(9))
